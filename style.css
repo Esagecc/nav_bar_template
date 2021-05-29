@@ -11,9 +11,15 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+.container {
+    background: rgb(7, 7, 119);
+    display: flex;
+    flex-direction: column;
+
+}
+
 
 .top-navbar {
-    background: rgb(7, 7, 119);
     color:#fff;
     display: flex;
     justify-content: space-between;
@@ -101,4 +107,35 @@ body {
     transform: rotate(-45deg) translate(35px, 35px);
 }
 
+@media (min-width:700px) {
+    .toggle {
+        display: none;
+    }
 
+    .container {
+        flex-direction: row;
+    }
+
+    .navbar {
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: row;
+        background: rgb(7, 7, 119);
+    }
+
+    .navbar-item {
+        color: #fff;
+        padding-left: 20px;
+    }
+
+    .navbar-item:hover, .navbar-item:focus {
+        text-shadow: none;
+    }
+
+}
